@@ -5,6 +5,8 @@ import java.util.stream.Collectors;
 
 import br.com.thr3r.domain.daos.UserDAO;
 import br.com.thr3r.domain.models.dtos.UserDTO;
+import br.com.thr3r.domain.models.entities.User;
+import br.com.thr3r.domain.models.forms.UserForm;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.persistence.EntityNotFoundException;
@@ -20,6 +22,10 @@ public class UserService {
 
     public UserDTO findById(long id) throws Exception {
         return new UserDTO(userDAO.findById(id).orElseThrow(EntityNotFoundException::new));
+    }
+
+    public UserDTO save(UserForm form) throws Exception {
+        return new UserDTO(userDAO.save(new User(form)));
     }
 
 }

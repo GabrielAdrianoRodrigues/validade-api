@@ -1,5 +1,6 @@
 package br.com.thr3r.domain.models.entities;
 
+import br.com.thr3r.domain.models.forms.UserForm;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -28,4 +29,10 @@ public class User {
 
     @Column(name = "pwd_user")
     private String password;
+
+    public User(UserForm form) {
+        this.name = form.name();
+        this.email = form.email();
+        this.password = form.password();
+    }
 }
