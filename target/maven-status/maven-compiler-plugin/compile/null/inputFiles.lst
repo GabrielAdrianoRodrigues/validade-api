@@ -1,0 +1,11 @@
+C:\Users\UserOtt\Documents\gabrielGit\validade-api\src\main\java\br\com\thr3team\domain\models\entities\Product.java
+C:\Users\UserOtt\Documents\gabrielGit\validade-api\src\main\java\br\com\thr3team\controllers\UserController.java
+C:\Users\UserOtt\Documents\gabrielGit\validade-api\src\main\java\br\com\thr3team\domain\models\entities\User.java
+C:\Users\UserOtt\Documents\gabrielGit\validade-api\src\main\java\br\com\thr3team\services\UserService.java
+C:\Users\UserOtt\Documents\gabrielGit\validade-api\src\main\java\br\com\thr3team\domain\models\enums\ProductStatus.java
+C:\Users\UserOtt\Documents\gabrielGit\validade-api\src\main\java\br\com\thr3team\domain\daos\DAO.java
+C:\Users\UserOtt\Documents\gabrielGit\validade-api\src\main\java\br\com\thr3team\domain\exceptions\ClientException.java
+C:\Users\UserOtt\Documents\gabrielGit\validade-api\src\main\java\br\com\thr3team\ApplicationContext.java
+C:\Users\UserOtt\Documents\gabrielGit\validade-api\src\main\java\br\com\thr3team\infra\config\handlers\ExceptionHandler.java
+C:\Users\UserOtt\Documents\gabrielGit\validade-api\src\main\java\br\com\thr3team\domain\daos\ProductDAO.java
+C:\Users\UserOtt\Documents\gabrielGit\validade-api\src\main\java\br\com\thr3team\domain\daos\UserDAO.java

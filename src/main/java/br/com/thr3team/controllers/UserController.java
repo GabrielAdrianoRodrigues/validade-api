@@ -1,5 +1,6 @@
 package br.com.thr3team.controllers;
 
+import org.jboss.resteasy.reactive.RestPath;
 import org.jboss.resteasy.reactive.RestResponse;
 import org.jboss.resteasy.reactive.RestResponse.ResponseBuilder;
 
@@ -18,7 +19,13 @@ public class UserController {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public RestResponse<?> findAll() throws Exception {
-        return ResponseBuilder.ok(userService.getClass()).build();
+        return ResponseBuilder.ok(userService.findAll()).build();
     }
 
+    @GET
+    @Path("{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public RestResponse<?> findById(@RestPath Long id) throws Exception {
+        return ResponseBuilder.ok(userService.findById(id)).build();
+    }
 }

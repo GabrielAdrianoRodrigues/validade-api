@@ -5,12 +5,16 @@ import java.util.Optional;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+import jakarta.persistence.Table;
 import jakarta.transaction.Transactional;
 
 @Transactional
+@SuppressWarnings("unchecked")
 public abstract class DAO<T, I> {
     @PersistenceContext
     protected EntityManager em;
+
+    private Class<T> persistenceClass;
 
     public T save(T entity) {
         em.persist(entity);
@@ -26,7 +30,15 @@ public abstract class DAO<T, I> {
         return em.merge(entity);        
     }
 
-    public Optional<T> findById(Class<T> clazz, I id) {
-        return Optional.of(em.find(clazz, id));
+    public Optional<T> findById(I id) {
+        return Optional.of(em.find(persistenceClass, id));
+    }
+
+    public void delete(T entity) {
+        em.remove(entity);
+    }
+
+    public List<T> findAll() {
+        return (List<T>) em.createNativeQuery("SELECT * FROM %s".formatted(persistenceClass.getAnnotation(Table.class).name()), persistenceClass).getResultList();
     }
 }
