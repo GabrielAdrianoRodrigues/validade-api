@@ -18,7 +18,7 @@ public class UserService {
         return userDAO.findAll().stream().map(UserDTO::new).collect(Collectors.toList());
     }
 
-    public UserDTO findById(Long id) throws Exception {
+    public UserDTO findById(long id) throws Exception {
         return new UserDTO(userDAO.findById(id).orElseThrow(EntityNotFoundException::new));
     }
 

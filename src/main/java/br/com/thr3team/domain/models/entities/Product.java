@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 public class Product {
     @Id
     @Column(name = "gtin", nullable = false)
-    private Long gtin;
+    private long gtin;
 
     @Column(name = "nm_product", nullable = false)
     private String name;
@@ -33,5 +33,5 @@ public class Product {
     private ProductStatus productStatus;
 
     @Column(name = "qt_product", nullable = true)
-    private Integer amount;
+    private int amount;
 }
