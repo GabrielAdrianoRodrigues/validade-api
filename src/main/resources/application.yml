@@ -31,7 +31,7 @@ quarkus:
       generation: {update}
   flyway:
     migrate-at-start: true
-    locations: db/migrations
+    locations: db/migrationsa
 gs1-brasil:
   url: https://api.gs1br.org/gs1
   client-id: clientId
