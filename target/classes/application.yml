@@ -1,4 +1,0 @@
-gs1-brasil:
-  url: https://api.gs1br.org/gs1
-  client-id: clientId
-  access-token: token
