@@ -1,4 +1,4 @@
-package br.com.thr3team.infra.config.handlers;
+package br.com.thr3team.config.infra.handlers;
 
 import br.com.thr3team.domain.exceptions.ClientException;
 import jakarta.persistence.EntityNotFoundException;
